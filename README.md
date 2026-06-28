@@ -17,6 +17,56 @@ ArcSpectra is powered by a shared, optimized calculation backend and provides tw
 
 ---
 
+## 🎛️ Detailed UI Fields & Controls Guide
+
+The ArcSpectra interface is organized into a settings sidebar and a tabbed main content panel. Below is a detailed explanation of what every input field, dropdown, and checkbox does:
+
+### 1. Settings Sidebar Controls
+- **Input GeoTIFF File (Entry & Browse Button)**:
+  - *What it does:* Specifies the absolute path to the raw multispectral GeoTIFF image to be processed.
+  - *Archaeological Context:* The image should be an orthomosaic (stitched drone flight) or satellite scene containing at least three bands (typically Green, Red, and Near-Infrared).
+- **Output Directory (Entry & Browse Button)**:
+  - *What it does:* The folder where calculated index GeoTIFFs and the overview grid plot will be exported.
+  - *Archaeological Context:* Keeps results organized. A subdirectory named after your input file will be created inside this folder.
+- **Sensor Mapping Preset (Dropdown)**:
+  - *What it does:* Selects a pre-configured band order template matching your multispectral camera.
+  - *Options:* Common presets include `DJI Multispectral`, `NRW (State Geodata)`, `SEQ (MicaSense)`, or `Custom Configuration` (for manual entry).
+- **Sensor Mapping Builder (`🛠️ Build` Button)**:
+  - *What it does:* Opens a modal window to create, rename, edit, or delete sensor templates, mapping bands to channel numbers.
+- **Active Vegetation Indices (Checkboxes)**:
+  - *What it does:* Allows toggling which spectral indices to compute. Only indices selected in the *Index Editor* will appear here.
+- **WDVI Slope (s) (Numeric Entry)**:
+  - *What it does:* Sets the slope coefficient `s` of the "soil line" in the Near-Infrared (NIR) vs. Red spectral space (default: `1.0`).
+  - *Archaeological Context:* Used by the Weighted Difference Vegetation Index (WDVI). By adjusting `s`, you mathematically subtract background soil reflectance, isolating subtle canopy signals from sparse cropmarks.
+- **Reflectance Scaling Mode (Dropdown)**:
+  - *What it does:* Defines how the raw pixel values (Digital Numbers, DN) are scaled before calculations.
+  - *Options:*
+    - `Automatic (recommended)`: Automatically detects whether values represent reflectances (0.0 to 1.0) or digital numbers, and applies scaling coefficients of `255.0` or `65535.0` to normalize them.
+    - `1.0 (No scaling)`: Leaves pixel values unmodified.
+    - `Custom Value`: Enables the *Custom Factor* entry to scale by a custom user-defined constant.
+- **Custom Factor (Numeric Entry)**:
+  - *What it does:* Active only when scaling mode is set to "Custom Value". Divides all raw pixel values by this number.
+- **Start Processing (Button)**:
+  - *What it does:* Starts the background computation thread to execute index calculation.
+- **Open Output Folder (Button)**:
+  - *What it does:* Opens the resolved destination subdirectory in your system file explorer.
+
+### 2. Main Content Tabs
+- **📁 Input Information**:
+  - *Metadata Card:* Displays spatial details of the loaded image (width, height, coordinate reference system, and band count).
+  - *OSM Footprint Map:* Automatically transforms UTM coordinates to WGS84 and stitches OpenStreetMap tiles, drawing an emerald green polygon outlining your image's physical footprint.
+- **📊 Results Visualizer**:
+  - *Plot Canvas:* Displays a rescaled 2x3 overview plot of all calculated indices.
+  - *Statistics/Interactive Map:* (Active after processing) Shows min, max, mean, and standard deviation for each index.
+- **📝 Index Editor**:
+  - *Geopera Database Source:* Provides the database connection link to the [Geopera Spectral Database (docs.geopera.com/spectral-indices)](https://docs.geopera.com/spectral-indices).
+  - *Search:* Filters the table by index name, formula, or category.
+  - *Formula Inputs:* Allows modifying formulas and updating the local JSON.
+- **📝 Console Logs**:
+  - *Text Console:* Displays real-time logging, processing updates, and error stacktraces.
+
+---
+
 ## 🛠️ Sensor Template Builder & Configuration
 
 Different multispectral sensors capture bands in varying channel order. The **Sensor Template Builder** solves this by letting you define templates where each required band (e.g., `NIR`, `RedEdge`, `Red`, `Green`) is assigned a default band index (channel number) in the source GeoTIFF file. 
@@ -59,7 +109,7 @@ In the **Sensor Template Builder**, this is mapped as:
 
 ## 📝 Geopera Index Editor
 
-ArcSpectra is pre-compiled with a database of **182 optical spectral indices** parsed from the Geopera Spectral Database (docs.geopera.com/spectral-indices) and saved in [compiled_indices.json](file:///c:/Users/langm/sciebo/BCDH_Projektbox/1_BCDH%20Intern/Scripts/multispectral/multispectral/compiled_indices.json).
+ArcSpectra is pre-compiled with a database of **182 optical spectral indices** parsed from the [Geopera Spectral Database (docs.geopera.com/spectral-indices)](https://docs.geopera.com/spectral-indices) and saved in [compiled_indices.json](file:///c:/Users/langm/sciebo/BCDH_Projektbox/1_BCDH%20Intern/Scripts/multispectral/multispectral/compiled_indices.json).
 
 In the **📝 Index Editor** tab, you can search and filter the database:
 - **Search Bar**: Query by abbreviation, name, or formula.
@@ -70,10 +120,28 @@ In the **📝 Index Editor** tab, you can search and filter the database:
 
 ---
 
-## 🔬 Core Parameters for Archaeologists
+## 📊 Spektralindizes in der Archäologie (Archäologischer Leitfaden)
 
-- **WDVI Slope (s)**: Slope of the soil line in the NIR-Red spectral space. Because soil reflectance varies based on wetness or composition, the slope coefficient `s` allows the **Weighted Difference Vegetation Index (WDVI)** to subtract the bare soil background signal. This is critical for highlighting subtle cropmarks in fields with sparse vegetation or open soil patches.
-- **Reflectance Scaling**: Scales digital pixel values (Digital Numbers, DN) to physical surface reflectance range `[0.0 - 1.0]`. ArcSpectra automatically detects if scaling is required (e.g., if DN ranges up to 255 or 65535) and scales it, preventing formula saturation and calculation errors (particularly vital for NDVI, SAVI, and GEMI).
+ArcSpectra lädt eine Datenbank mit **182 optischen Indizes** und bietet eine vorkonfigurierte Kategorie **`archaeology`** mit den für die archäologische Prospektion wichtigsten Indizes:
+
+*   **NDVI (Normalized Difference Vegetation Index)**
+    *   *Formel:* `(NIR - Red) / (NIR + Red)`
+    *   *Archäologischer Nutzen:* Der Standard-Index für Biomasse und Pflanzenvitalität. Extrem effektiv beim Aufspüren von Bewuchsmerkmalen über verfüllten Befunden (z. B. Gräben) oder massiven Strukturen (z. B. römische Fundamente).
+*   **GNDVI (Green NDVI)**
+    *   *Formel:* `(NIR - Green) / (NIR + Green)`
+    *   *Archäologischer Nutzen:* Verwendet den grünen Kanal anstelle des roten. Reagiert empfindlicher auf Schwankungen des Chlorophyllgehalts und eignet sich hervorragend zur Erkennung früher Phasen von Vegetationsstress über verborgenen Mauern.
+*   **SAVI (Soil Adjusted Vegetation Index)**
+    *   *Formel:* `(1.5 * (NIR - Red)) / (NIR + Red + 0.5)`
+    *   *Archäologischer Nutzen:* Minimiert den störenden Einfluss von offenem Boden. Unerlässlich für die Prospektion auf Äckern mit lückenhaftem Bewuchs oder in trockenen Regionen.
+*   **WDVI (Weighted Difference Vegetation Index)**
+    *   *Formel:* `NIR - (s * Red)`
+    *   *Archäologischer Nutzen:* Bereinigt die Vegetationswerte mithilfe der Steigung der Bodenlinie (`s`). Perfekt geeignet, um Störeffekte von reinem Boden vollständig zu eliminieren.
+*   **NAVI (Normalized Archaeological Vegetation Index)** & **NAI (Normalized Archaeological Index)**
+    *   *Formel:* `(NIR - RedEdge) / (RedEdge + NIR)`
+    *   *Archäologischer Nutzen:* Nutzt die Wellenlängen im Bereich der "Red-Edge"-Kante (~700–800 nm). Maximiert den spektralen Kontrast zwischen gesundem Bewuchs und durch archäologische Strukturen gestresster Vegetation.
+*   **NDWI (Normalized Difference Water Index)**
+    *   *Formel:* `(Green - NIR) / (Green + NIR)`
+    *   *Archäologischer Nutzen:* Reagiert sensitiv auf den Wassergehalt in Blättern und Böden. Ideal zum Aufspüren feuchter Grabenwerke oder feuchter Senken.
 
 ---
 
