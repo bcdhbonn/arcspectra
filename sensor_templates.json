@@ -1,0 +1,33 @@
+{
+  "NRW (State Geodata)": {
+    "Red": 1,
+    "Green": 2,
+    "Blue": 3,
+    "NIR": 4
+  },
+  "DJI Multispectral": {
+    "Red": 3,
+    "Green": 2,
+    "Blue": 1,
+    "NIR": 5
+  },
+  "SEQ (MicaSense RedEdge)": {
+    "Red": 2,
+    "Green": 1,
+    "NIR": 4,
+    "RedEdge": 3
+  },
+  "Sentinel-2 (B4,B3,B2,B8,B5)": {
+    "Red": 4,
+    "Green": 3,
+    "Blue": 2,
+    "NIR": 8,
+    "RedEdge": 5
+  },
+  "Landsat 8/9 (B4,B3,B2,B5)": {
+    "Red": 4,
+    "Green": 3,
+    "Blue": 2,
+    "NIR": 5
+  }
+}

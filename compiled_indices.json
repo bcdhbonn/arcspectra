@@ -1,0 +1,2163 @@
+[
+  {
+    "id": "alteration",
+    "abbrev": "ALT",
+    "name": "Alteration Index",
+    "category": "geology",
+    "formula": "SWIR3 / SWIR5",
+    "bands": [
+      "SWIR3",
+      "SWIR5"
+    ]
+  },
+  {
+    "id": "ari",
+    "abbrev": "ARI",
+    "name": "Anthocyanin Reflectance Index",
+    "category": "vegetation",
+    "formula": "(1 / 550) - (1 / 700)",
+    "bands": [
+      "550",
+      "700"
+    ]
+  },
+  {
+    "id": "ari2",
+    "abbrev": "mARI",
+    "name": "Modified Anthocyanin Reflectance Index",
+    "category": "vegetation",
+    "formula": "((1 / 550) - (1 / 700)) * NIR",
+    "bands": [
+      "550",
+      "700",
+      "NIR"
+    ]
+  },
+  {
+    "id": "arvi",
+    "abbrev": "ARVI",
+    "name": "Atmospherically Resistant Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - Red - gamma * (Red - Blue)) / (NIR + Red - gamma * (Red - Blue))",
+    "bands": [
+      "Blue",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "arvi2",
+    "abbrev": "ARVI2",
+    "name": "Atmospherically Resistant Vegetation Index 2",
+    "category": "vegetation",
+    "formula": "(NIR - (RED - gamma * (RED - BLUE))) / (NIR + (RED - gamma * (RED - BLUE)))",
+    "bands": [
+      "BLUE",
+      "RED",
+      "NIR"
+    ]
+  },
+  {
+    "id": "bai",
+    "abbrev": "BAI",
+    "name": "Burn Area Index",
+    "category": "burn",
+    "formula": "1 / ((0.1 - RED)^2 + (0.06 - NIR)^2)",
+    "bands": [
+      "RED",
+      "NIR"
+    ]
+  },
+  {
+    "id": "bgi",
+    "abbrev": "BGI",
+    "name": "Blue Green Pigment Index",
+    "category": "vegetation",
+    "formula": "450 / 550",
+    "bands": [
+      "450",
+      "550"
+    ]
+  },
+  {
+    "id": "bi",
+    "abbrev": "BI",
+    "name": "Brightness Index",
+    "category": "soil",
+    "formula": "sqrt((RED^2 + GREEN^2) / 2)",
+    "bands": [
+      "GREEN",
+      "RED"
+    ]
+  },
+  {
+    "id": "bi2",
+    "abbrev": "BI2",
+    "name": "Second Brightness Index",
+    "category": "soil",
+    "formula": "sqrt((RED^2 + GREEN^2 + NIR^2) / 3)",
+    "bands": [
+      "GREEN",
+      "RED",
+      "NIR"
+    ]
+  },
+  {
+    "id": "bndvi",
+    "abbrev": "BNDVI",
+    "name": "Blue Normalized Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "(nir - blue) / (nir + blue)",
+    "bands": [
+      "blue",
+      "nir"
+    ]
+  },
+  {
+    "id": "bnirv",
+    "abbrev": "bNIRv",
+    "name": "Blue Near-Infrared Reflectance of Vegetation",
+    "category": "vegetation",
+    "formula": "((N - B)/(N + B)) * N",
+    "bands": [
+      "N",
+      "B"
+    ]
+  },
+  {
+    "id": "bri",
+    "abbrev": "BRI",
+    "name": "Blue Red Pigment Index",
+    "category": "vegetation",
+    "formula": "450 / 690",
+    "bands": [
+      "450",
+      "690"
+    ]
+  },
+  {
+    "id": "bwdrvi",
+    "abbrev": "BWDRVI",
+    "name": "Blue Wide Dynamic Range Vegetation Index",
+    "category": "vegetation",
+    "formula": "(0.1 * nir - blue) / (0.1 * nir + blue)",
+    "bands": [
+      "blue",
+      "nir"
+    ]
+  },
+  {
+    "id": "carter1",
+    "abbrev": "Ctr1",
+    "name": "Simple Ratio 695/420 Carter1",
+    "category": "vegetation",
+    "formula": "695 / 420",
+    "bands": [
+      "420",
+      "695"
+    ]
+  },
+  {
+    "id": "carter2",
+    "abbrev": "Ctr2",
+    "name": "Simple Ratio 695/760 Carter2",
+    "category": "vegetation",
+    "formula": "695 / 760",
+    "bands": [
+      "695",
+      "760"
+    ]
+  },
+  {
+    "id": "carter6",
+    "abbrev": "Ctr6",
+    "name": "Simple Ratio 550/420 Carter6",
+    "category": "vegetation",
+    "formula": "550 / 420",
+    "bands": [
+      "420",
+      "550"
+    ]
+  },
+  {
+    "id": "ci_rededge",
+    "abbrev": "CIrededge",
+    "name": "Chlorophyll Index Red Edge",
+    "category": "vegetation",
+    "formula": "(nir / re1) - 1",
+    "bands": [
+      "re1",
+      "nir"
+    ]
+  },
+  {
+    "id": "ci_soil",
+    "abbrev": "CI",
+    "name": "Coloration Index",
+    "category": "soil",
+    "formula": "(RED - GREEN) / (RED + GREEN)",
+    "bands": [
+      "GREEN",
+      "RED"
+    ]
+  },
+  {
+    "id": "cirededge710",
+    "abbrev": "CIrededge710",
+    "name": "Chlorophyll Index RedEdge 710",
+    "category": "vegetation",
+    "formula": "750 / 710 - 1",
+    "bands": [
+      "710",
+      "750"
+    ]
+  },
+  {
+    "id": "cri550",
+    "abbrev": "CRI550",
+    "name": "Carotenoid Reflectance Index 550",
+    "category": "vegetation",
+    "formula": "(1 / 510) - (1 / 550)",
+    "bands": [
+      "510",
+      "550"
+    ]
+  },
+  {
+    "id": "cri700",
+    "abbrev": "CRI700",
+    "name": "Carotenoid Reflectance Index 700",
+    "category": "vegetation",
+    "formula": "(1 / 510) - (1 / 700)",
+    "bands": [
+      "510",
+      "700"
+    ]
+  },
+  {
+    "id": "ctr3",
+    "abbrev": "Ctr3",
+    "name": "Carter Stress Index 3",
+    "category": "vegetation",
+    "formula": "orange / nir",
+    "bands": [
+      "orange",
+      "nir"
+    ]
+  },
+  {
+    "id": "ctr4",
+    "abbrev": "Ctr4",
+    "name": "Carter Stress Index 4",
+    "category": "vegetation",
+    "formula": "re1 / nir",
+    "bands": [
+      "re1",
+      "nir"
+    ]
+  },
+  {
+    "id": "dvi",
+    "abbrev": "DVI",
+    "name": "Simple Ratio NIR/RED Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "NIR - Red",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "evi",
+    "abbrev": "EVI",
+    "name": "Enhanced Vegetation Index",
+    "category": "vegetation",
+    "formula": "2.5 * ((NIR - Red) / (NIR + 6 * Red - 7.5 * Blue + 1))",
+    "bands": [
+      "Blue",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "fe3_iron",
+    "abbrev": "Fe3+",
+    "name": "Ferric Iron Index",
+    "category": "geology",
+    "formula": "Red / Green",
+    "bands": [
+      "Green",
+      "Red"
+    ]
+  },
+  {
+    "id": "ferrous_iron",
+    "abbrev": "FEI",
+    "name": "Ferrous Iron Index",
+    "category": "geology",
+    "formula": "(SWIR5 / Red + NIR1 / Green)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR1",
+      "SWIR5"
+    ]
+  },
+  {
+    "id": "ferrous_silicates",
+    "abbrev": "FSI",
+    "name": "Ferrous Silicates Index",
+    "category": "geology",
+    "formula": "SWIR5 / SWIR4",
+    "bands": [
+      "SWIR4",
+      "SWIR5"
+    ]
+  },
+  {
+    "id": "gari",
+    "abbrev": "GARI",
+    "name": "Green Atmospherically Resistant Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - (GREEN - gamma * (BLUE - RED))) / (NIR + (GREEN - gamma * (BLUE - RED)))",
+    "bands": [
+      "BLUE",
+      "GREEN",
+      "RED",
+      "NIR"
+    ]
+  },
+  {
+    "id": "gdvi",
+    "abbrev": "GDVI",
+    "name": "Green Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "NIR - Green",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "gemi",
+    "abbrev": "GEMI",
+    "name": "Global Environment Monitoring Index",
+    "category": "vegetation",
+    "formula": "eta = (2*(NIR**2 - Red**2) + 1.5*NIR + 0.5*Red) / (NIR + Red + 0.5); eta * (1 - 0.25 * eta) - (Red - 0.125) / (1 - Red)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "gemi2",
+    "abbrev": "GEMI",
+    "name": "Global Environmental Monitoring Index",
+    "category": "vegetation",
+    "formula": "eta = (2*(NIR**2 - Red**2) + 1.5*NIR + 0.5*Red) / (NIR + Red + 0.5); eta * (1 - 0.25 * eta) - (Red - 0.125) / (1 - Red)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "gndvi",
+    "abbrev": "GNDVI",
+    "name": "Green Normalized Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - Green) / (NIR + Green)",
+    "bands": [
+      "NIR",
+      "Green"
+    ]
+  },
+  {
+    "id": "gosavi",
+    "abbrev": "GOSAVI",
+    "name": "Green Optimized Soil Adjusted Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - Green) / (NIR + Green + 0.16)",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "gossan",
+    "abbrev": "GOS",
+    "name": "Gossan Index",
+    "category": "geology",
+    "formula": "SWIR4 / Red",
+    "bands": [
+      "Red",
+      "SWIR4"
+    ]
+  },
+  {
+    "id": "grvi",
+    "abbrev": "GRVI",
+    "name": "Green Ratio Vegetation Index",
+    "category": "vegetation",
+    "formula": "NIR / Green",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "gsavi",
+    "abbrev": "GSAVI",
+    "name": "Green Soil Adjusted Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - Green) / (NIR + Green + L * (1 + L))",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "gvi_tc",
+    "abbrev": "GVI",
+    "name": "Tasselled Cap - vegetation",
+    "category": "vegetation",
+    "formula": "-0.2848 * blue - 0.2435 * green - 0.5436 * red + 0.7243 * nir + 0.0840 * swir1 - 0.1800 * swir2",
+    "bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2"
+    ]
+  },
+  {
+    "id": "host_rock",
+    "abbrev": "HRI",
+    "name": "Host Rock Index",
+    "category": "geology",
+    "formula": "SWIR5 / SWIR6",
+    "bands": [
+      "SWIR5",
+      "SWIR6"
+    ]
+  },
+  {
+    "id": "hue",
+    "abbrev": "H",
+    "name": "Hue Index",
+    "category": "urban",
+    "formula": "arctan((2 * Red - Green - Blue) / (30.5 * (Green - Blue)))",
+    "bands": [
+      "Red",
+      "Green",
+      "Blue"
+    ]
+  },
+  {
+    "id": "intensity",
+    "abbrev": "I",
+    "name": "Intensity Index",
+    "category": "urban",
+    "formula": "(1/30.5) * (Red + Green + Blue)",
+    "bands": [
+      "Red",
+      "Green",
+      "Blue"
+    ]
+  },
+  {
+    "id": "ipvi",
+    "abbrev": "IPVI",
+    "name": "Infrared Percentage Vegetation Index",
+    "category": "vegetation",
+    "formula": "NIR / (NIR + Red) * 2 * (NDVI + 1)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "kaolinitic",
+    "abbrev": "Kaolinitic",
+    "name": "Kaolinitic Index",
+    "category": "geology",
+    "formula": "SWIR2 / SWIR1",
+    "bands": [
+      "SWIR1",
+      "SWIR2"
+    ]
+  },
+  {
+    "id": "laterite",
+    "abbrev": "Laterite",
+    "name": "Laterite Index",
+    "category": "geology",
+    "formula": "SWIR1 / SWIR0",
+    "bands": [
+      "SWIR0",
+      "SWIR1"
+    ]
+  },
+  {
+    "id": "lci",
+    "abbrev": "LCI",
+    "name": "Leaf Chlorophyll Index",
+    "category": "vegetation",
+    "formula": "(nir - re1) / (nir + red)",
+    "bands": [
+      "red",
+      "re1",
+      "nir"
+    ]
+  },
+  {
+    "id": "lswi",
+    "abbrev": "LSWI",
+    "name": "Land Surface Water Index",
+    "category": "water",
+    "formula": "(NIR - SWIR) / (NIR + SWIR)",
+    "bands": [
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "mcari",
+    "abbrev": "MCARI",
+    "name": "Modified Chlorophyll Absorption in Reflectance Index",
+    "category": "vegetation",
+    "formula": "((RedEdge - Red) - 0.2 * (RedEdge - Green)) * (RedEdge / Red)",
+    "bands": [
+      "Green",
+      "Red",
+      "RedEdge"
+    ]
+  },
+  {
+    "id": "mcari1",
+    "abbrev": "MCARI1",
+    "name": "Modified Chlorophyll Absorption in Reflectance Index 1",
+    "category": "vegetation",
+    "formula": "1.2 * (2.5 * (NIR - Red) - 1.3 * (NIR - Green))",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "mcari2",
+    "abbrev": "MCARI2",
+    "name": "Modified Chlorophyll Absorption in Reflectance Index 2",
+    "category": "vegetation",
+    "formula": "(1.5 * 2.5 * (NIR - Red) - 1.3 * (NIR - Green) * (2 * NIR + 1)^2 - (6 * NIR - 5 * Red) - 0.5)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "mcari710",
+    "abbrev": "MCARI710",
+    "name": "Modified Chlorophyll Absorption Ratio Index 710",
+    "category": "vegetation",
+    "formula": "((750 - 710) - 0.2 * (750 - 550)) * (750 / 710)",
+    "bands": [
+      "550",
+      "710",
+      "750"
+    ]
+  },
+  {
+    "id": "mcari_mtvi2",
+    "abbrev": "MCARI/MTVI2",
+    "name": "MCARI/MTVI2",
+    "category": "vegetation",
+    "formula": "((700 - 670) - 0.2 * (700 - 550)) * (700 / 670) / (1.5 * (1.2 * (800 - 550) - 2.5 * (670 - 550)) / sqrt((2 * 800 + 1)^2 - (6 * 800 - 5 * sqrt(670)) - 0.5))",
+    "bands": [
+      "550",
+      "670",
+      "700",
+      "800"
+    ]
+  },
+  {
+    "id": "mcari_osavi",
+    "abbrev": "MCARI/OSAVI",
+    "name": "MCARI/OSAVI",
+    "category": "vegetation",
+    "formula": "((700 - 670) - 0.2 * (700 - 550) * (700 / 670)) / ((1 + 0.16) * (800 - 670) / (800 + 670 + 0.16))",
+    "bands": [
+      "550",
+      "670",
+      "700",
+      "800"
+    ]
+  },
+  {
+    "id": "mcari_osavi750",
+    "abbrev": "MCARI/OSAVI750",
+    "name": "MCARI/OSAVI750",
+    "category": "vegetation",
+    "formula": "((750 - 705) - 0.2 * (750 - 550) * (750 / 705)) / ((1 + 0.16) * (750 - 705) / (750 + 705 + 0.16))",
+    "bands": [
+      "550",
+      "705",
+      "750"
+    ]
+  },
+  {
+    "id": "mnd705",
+    "abbrev": "mND705",
+    "name": "Modified Normalized Difference (705, 750 and 445 nm)",
+    "category": "vegetation",
+    "formula": "(RE2 - RE1)/(RE2 + RE1 - A)",
+    "bands": [
+      "RE2",
+      "RE1",
+      "A"
+    ]
+  },
+  {
+    "id": "mndwi",
+    "abbrev": "MNDWI",
+    "name": "Modified Normalized Difference Water Index",
+    "category": "water",
+    "formula": "(Green - SWIR) / (Green + SWIR)",
+    "bands": [
+      "Green",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "mnli",
+    "abbrev": "MNLI",
+    "name": "Modified Nonlinear Index",
+    "category": "vegetation",
+    "formula": "((SWIR4**2 - nir) * 1.5) / (SWIR4**2 + nir + 0.5)",
+    "bands": [
+      "nir",
+      "swir"
+    ]
+  },
+  {
+    "id": "msavi",
+    "abbrev": "MSAVI",
+    "name": "Modified Soil Adjusted Vegetation Index",
+    "category": "vegetation",
+    "formula": "0.5 * (2 * NIR + 1 - sqrt((2 * NIR + 1)^2 - 8 * (NIR - Red)))",
+    "bands": [
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "msavi_hyper",
+    "abbrev": "MSAVIhyper",
+    "name": "Modified Soil Adjusted Vegetation Index Hyper",
+    "category": "vegetation",
+    "formula": "0.5 * ((2 * NIR + 1) - sqrt((2 * NIR + 1)^2 - 8 * (NIR - Red)))",
+    "bands": [
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "msi",
+    "abbrev": "MSI",
+    "name": "Moisture Stress Index",
+    "category": "vegetation",
+    "formula": "SWIR1 / NIR",
+    "bands": [
+      "NIR",
+      "SWIR1"
+    ]
+  },
+  {
+    "id": "msr670",
+    "abbrev": "MSR670",
+    "name": "Modified Simple Ratio 670,800",
+    "category": "vegetation",
+    "formula": "(nir - red) / (nir + red)",
+    "bands": [
+      "red",
+      "nir"
+    ]
+  },
+  {
+    "id": "msr705",
+    "abbrev": "mSR705",
+    "name": "Modified Simple Ratio (705 and 445 nm)",
+    "category": "vegetation",
+    "formula": "(RE2 - A)/(RE2 + A)",
+    "bands": [
+      "RE2",
+      "A"
+    ]
+  },
+  {
+    "id": "msr705_750",
+    "abbrev": "MSR705",
+    "name": "Modified Simple Ratio 705,750",
+    "category": "vegetation",
+    "formula": "(750 - 705) / (750 + 705)",
+    "bands": [
+      "705",
+      "750"
+    ]
+  },
+  {
+    "id": "mtvi1",
+    "abbrev": "MTVI1",
+    "name": "Modified Triangular Vegetation Index 1",
+    "category": "vegetation",
+    "formula": "1.2 * (1.2 * (NIR - Green) - 2.5 * (Red - Green))",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "mtvi2",
+    "abbrev": "MTVI2",
+    "name": "Modified Triangular Vegetation Index 2",
+    "category": "vegetation",
+    "formula": "(1.5 * 1.2 * (NIR - Green) - 2.5 * (Red - Green) * (2 * NIR + 1)^2 - (6 * NIR - 5 * Red) - 0.5)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "muscovite",
+    "abbrev": "Muscovite",
+    "name": "Muscovite Index",
+    "category": "geology",
+    "formula": "SWIR2 / SWIR1",
+    "bands": [
+      "SWIR1",
+      "SWIR2"
+    ]
+  },
+  {
+    "id": "nbr",
+    "abbrev": "NBR",
+    "name": "Normalized Burn Ratio",
+    "category": "vegetation",
+    "formula": "(NIR - SWIR) / (NIR + SWIR)",
+    "bands": [
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "nd_mir_nir",
+    "abbrev": "ND MIR/NIR",
+    "name": "Normalized Difference MIR/NIR Vegetation Index",
+    "category": "vegetation",
+    "formula": "(MIR - NIR) / (MIR + NIR)",
+    "bands": [
+      "NIR",
+      "MIR"
+    ]
+  },
+  {
+    "id": "ndbi",
+    "abbrev": "NDBI",
+    "name": "Normalized Difference Built-up Index",
+    "category": "urban",
+    "formula": "(SWIR - NIR) / (SWIR + NIR)",
+    "bands": [
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "ndii",
+    "abbrev": "NDII",
+    "name": "Normalized Difference Infrared Index",
+    "category": "vegetation",
+    "formula": "(NIR - SWIR) / (NIR + SWIR)",
+    "bands": [
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "ndli",
+    "abbrev": "NDLI",
+    "name": "Normalized Difference Lignin Index",
+    "category": "vegetation",
+    "formula": "(log(1/SWIR2) - log(1/SWIR1)) / (log(1/SWIR2) + log(1/SWIR1))",
+    "bands": [
+      "SWIR1",
+      "SWIR2"
+    ]
+  },
+  {
+    "id": "ndmi",
+    "abbrev": "NDMI",
+    "name": "Normalized Difference Moisture Index",
+    "category": "vegetation",
+    "formula": "(NIR - SWIR) / (NIR + SWIR)",
+    "bands": [
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "ndmi2",
+    "abbrev": "NDMI",
+    "name": "Normalized Difference Moisture Index",
+    "category": "water",
+    "formula": "(NIR - SWIR1) / (NIR + SWIR1)",
+    "bands": [
+      "NIR",
+      "SWIR1"
+    ]
+  },
+  {
+    "id": "ndre",
+    "abbrev": "NDRE",
+    "name": "Normalized Difference Red-Edge",
+    "category": "vegetation",
+    "formula": "(NIR - RedEdge) / (NIR + RedEdge)",
+    "bands": [
+      "RedEdge",
+      "NIR"
+    ]
+  },
+  {
+    "id": "ndsi",
+    "abbrev": "NDSI",
+    "name": "Normalized Difference Salinity Index",
+    "category": "geology",
+    "formula": "(SWIR1 - SWIR2) / (SWIR1 + SWIR2)",
+    "bands": [
+      "SWIR1",
+      "SWIR2"
+    ]
+  },
+  {
+    "id": "ndvi",
+    "abbrev": "NDVI",
+    "name": "Normalized Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "(NIR - Red) / (NIR + Red)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "ndvi_classic",
+    "abbrev": "NDVI",
+    "name": "Normalized Difference Vegetation Index (Classic)",
+    "category": "vegetation",
+    "formula": "(NIR - Red) / (NIR + Red)",
+    "bands": [
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "ndvic",
+    "abbrev": "NDVIc",
+    "name": "Normalized Difference Vegetation Index C",
+    "category": "vegetation",
+    "formula": "(NIR - RED) / (NIR + RED) * (1 - (SWIR - SWIRmin) / (SWIRmax - SWIRmin))",
+    "bands": [
+      "RED",
+      "NIR",
+      "SWIR"
+    ]
+  },
+  {
+    "id": "ndwi",
+    "abbrev": "NDWI",
+    "name": "Normalized Difference Water Index",
+    "category": "water",
+    "formula": "(Green - NIR) / (Green + NIR)",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "ndwi_mcfeeters",
+    "abbrev": "NDWI",
+    "name": "Normalized Difference Water Index (McFeeters)",
+    "category": "water",
+    "formula": "(Green - NIR) / (Green + NIR)",
+    "bands": [
+      "Green",
+      "NIR"
+    ]
+  },
+  {
+    "id": "ngrdi",
+    "abbrev": "NGRDI",
+    "name": "Normalized Green Red Difference Index",
+    "category": "vegetation",
+    "formula": "(G - R) / (G + R)",
+    "bands": [
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "nhfd",
+    "abbrev": "NHFD",
+    "name": "Non-Homogeneous Feature Difference",
+    "category": "urban",
+    "formula": "(RE1 - A) / (RE1 + A)",
+    "bands": [
+      "RE1"
+    ]
+  },
+  {
+    "id": "nirv",
+    "abbrev": "NIRv",
+    "name": "Near-Infrared Reflectance of Vegetation",
+    "category": "vegetation",
+    "formula": "((N - R) / (N + R)) * N",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "nirvh2",
+    "abbrev": "NIRvH2",
+    "name": "Hyperspectral Near-Infrared Reflectance of Vegetation",
+    "category": "vegetation",
+    "formula": "N - R - k * (lambdaN - lambdaR)",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "nirvp",
+    "abbrev": "NIRvP",
+    "name": "Near-Infrared Reflectance of Vegetation and Incoming PAR",
+    "category": "vegetation",
+    "formula": "((N - R) / (N + R)) * N * PAR",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "nli",
+    "abbrev": "NLI",
+    "name": "Nonlinear vegetation index",
+    "category": "vegetation",
+    "formula": "(NIR**2 - red) / (NIR**2 + red)",
+    "bands": [
+      "red",
+      "nir"
+    ]
+  },
+  {
+    "id": "nmdi",
+    "abbrev": "NMDI",
+    "name": "Normalized Multi-band Drought Index",
+    "category": "vegetation",
+    "formula": "(N - (S1 - S2))/(N + (S1 - S2))",
+    "bands": [
+      "N",
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "norm_g",
+    "abbrev": "Norm G",
+    "name": "Normalized Green",
+    "category": "vegetation",
+    "formula": "Green / (NIR + Red + Green)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "norm_nir",
+    "abbrev": "Norm NIR",
+    "name": "Normalized Near-Infrared",
+    "category": "vegetation",
+    "formula": "NIR / (NIR + Red + Green)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "norm_r",
+    "abbrev": "Norm R",
+    "name": "Normalized Red",
+    "category": "vegetation",
+    "formula": "Red / (NIR + Red + Green)",
+    "bands": [
+      "Green",
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "normg",
+    "abbrev": "NormG",
+    "name": "Normalized Green",
+    "category": "vegetation",
+    "formula": "G/(N + G + R)",
+    "bands": [
+      "G",
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "normnir",
+    "abbrev": "NormNIR",
+    "name": "Normalized NIR",
+    "category": "vegetation",
+    "formula": "N/(N + G + R)",
+    "bands": [
+      "N",
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "normr",
+    "abbrev": "NormR",
+    "name": "Normalized Red",
+    "category": "vegetation",
+    "formula": "R/(N + G + R)",
+    "bands": [
+      "R",
+      "N",
+      "G"
+    ]
+  },
+  {
+    "id": "nrfig",
+    "abbrev": "NRFIg",
+    "name": "Normalized Rapeseed Flowering Index Green",
+    "category": "vegetation",
+    "formula": "(G - S2) / (G + S2)",
+    "bands": [
+      "G",
+      "S2"
+    ]
+  },
+  {
+    "id": "nrfir",
+    "abbrev": "NRFIr",
+    "name": "Normalized Rapeseed Flowering Index Red",
+    "category": "vegetation",
+    "formula": "(R - S2) / (R + S2)",
+    "bands": [
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "nsds",
+    "abbrev": "NSDS",
+    "name": "Normalized Shortwave Infrared Difference Soil-Moisture",
+    "category": "soil",
+    "formula": "(S1 - S2)/(S1 + S2)",
+    "bands": [
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "nsdsi1",
+    "abbrev": "NSDSI1",
+    "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 1",
+    "category": "soil",
+    "formula": "(S1-S2)/S1",
+    "bands": [
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "nsdsi2",
+    "abbrev": "NSDSI2",
+    "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 2",
+    "category": "soil",
+    "formula": "(S1-S2)/S2",
+    "bands": [
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "nsdsi3",
+    "abbrev": "NSDSI3",
+    "name": "Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3",
+    "category": "soil",
+    "formula": "(S1-S2)/(S1+S2)",
+    "bands": [
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "nstv1",
+    "abbrev": "NSTv1",
+    "name": "NIR-SWIR-Temperature Version 1",
+    "category": "fire",
+    "formula": "((N-S2)/(N+S2))*T",
+    "bands": [
+      "N",
+      "S2"
+    ]
+  },
+  {
+    "id": "nstv2",
+    "abbrev": "NSTv2",
+    "name": "NIR-SWIR-Temperature Version 2",
+    "category": "fire",
+    "formula": "(N-(S2+T))/(N+(S2+T))",
+    "bands": [
+      "N",
+      "S2"
+    ]
+  },
+  {
+    "id": "nwi",
+    "abbrev": "NWI",
+    "name": "New Water Index",
+    "category": "water",
+    "formula": "(B - (N + S1 + S2))/(B + (N + S1 + S2))",
+    "bands": [
+      "B",
+      "N",
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "ocvi",
+    "abbrev": "OCVI",
+    "name": "Optimized Chlorophyll Vegetation Index",
+    "category": "vegetation",
+    "formula": "(N / G) * (R / G) ** cexp",
+    "bands": [
+      "N",
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "osavi2",
+    "abbrev": "OSAVI2",
+    "name": "Optimized Soil Adjusted Vegetation Index 2",
+    "category": "vegetation",
+    "formula": "(1 + 0.16) * (750 - 705) / (750 + 705 + 0.16)",
+    "bands": [
+      "705",
+      "750"
+    ]
+  },
+  {
+    "id": "osi",
+    "abbrev": "OSI",
+    "name": "Oil Spill Index",
+    "category": "water",
+    "formula": "(G + R)/B",
+    "bands": [
+      "G",
+      "R",
+      "B"
+    ]
+  },
+  {
+    "id": "pi",
+    "abbrev": "PI",
+    "name": "Plastic Index",
+    "category": "water",
+    "formula": "N/(N + R)",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "pisi",
+    "abbrev": "PISI",
+    "name": "Perpendicular Impervious Surface Index",
+    "category": "urban",
+    "formula": "0.8192 * B - 0.5735 * N + 0.0750",
+    "bands": [
+      "B",
+      "N"
+    ]
+  },
+  {
+    "id": "pndvi",
+    "abbrev": "PNDVI",
+    "name": "Pan NDVI",
+    "category": "vegetation",
+    "formula": "(NIR - (GREEN + RED + BLUE)) / (NIR + (GREEN + RED + BLUE))",
+    "bands": [
+      "BLUE",
+      "GREEN",
+      "RED",
+      "NIR"
+    ]
+  },
+  {
+    "id": "pri_standard",
+    "abbrev": "PRI",
+    "name": "Photochemical Reflectance Index",
+    "category": "vegetation",
+    "formula": "(531 - 570) / (531 + 570)",
+    "bands": [
+      "531",
+      "570"
+    ]
+  },
+  {
+    "id": "psri2",
+    "abbrev": "PSRI",
+    "name": "Plant Senescence Reflectance Index",
+    "category": "vegetation",
+    "formula": "(678 - 500) / 750",
+    "bands": [
+      "500",
+      "678",
+      "750"
+    ]
+  },
+  {
+    "id": "rcc",
+    "abbrev": "RCC",
+    "name": "Red Chromatic Coordinate",
+    "category": "vegetation",
+    "formula": "R / (R + G + B)",
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ]
+  },
+  {
+    "id": "redsi",
+    "abbrev": "REDSI",
+    "name": "Red-Edge Disease Stress Index",
+    "category": "vegetation",
+    "formula": "((705.0 - 665.0) * (RE3 - R) - (783.0 - 665.0) * (RE1 - R)) / (2.0 * R)",
+    "bands": [
+      "RE3",
+      "R",
+      "RE1"
+    ]
+  },
+  {
+    "id": "reip1",
+    "abbrev": "REIP1",
+    "name": "Red-Edge Inflection Point 1",
+    "category": "vegetation",
+    "formula": "700 + 40 * (((red + nir) / 2 - re1) / (re2 - re1))",
+    "bands": [
+      "red",
+      "re1",
+      "re2",
+      "nir"
+    ]
+  },
+  {
+    "id": "reip2",
+    "abbrev": "REIP2",
+    "name": "Red-Edge Inflection Point 2",
+    "category": "vegetation",
+    "formula": "702 + 40 * (((red + nir) / 2 - re1) / (re2 - re1))",
+    "bands": [
+      "red",
+      "re1",
+      "re2",
+      "nir"
+    ]
+  },
+  {
+    "id": "rendvi",
+    "abbrev": "reNDVI",
+    "name": "Red Edge NDVI",
+    "category": "vegetation",
+    "formula": "(re2 - re1) / (re2 + re1)",
+    "bands": [
+      "re1",
+      "re2"
+    ]
+  },
+  {
+    "id": "rep",
+    "abbrev": "REP",
+    "name": "Red-Edge Position Linear Interpolation",
+    "category": "vegetation",
+    "formula": "700 + 40 * ((670 + 780)/2 - 700) / (740 - 700)",
+    "bands": [
+      "670",
+      "700",
+      "740",
+      "780"
+    ]
+  },
+  {
+    "id": "rgbvi",
+    "abbrev": "RGBVI",
+    "name": "Red Green Blue Vegetation Index",
+    "category": "vegetation",
+    "formula": "(G ** 2.0 - B * R)/(G ** 2.0 + B * R)",
+    "bands": [
+      "G",
+      "B",
+      "R"
+    ]
+  },
+  {
+    "id": "rgri",
+    "abbrev": "RGRI",
+    "name": "Red-Green Ratio Index",
+    "category": "vegetation",
+    "formula": "R/G",
+    "bands": [
+      "R",
+      "G"
+    ]
+  },
+  {
+    "id": "ri4xs",
+    "abbrev": "RI4XS",
+    "name": "SPOT HRV XS-based Redness Index 4",
+    "category": "soil",
+    "formula": "(R**2.0)/(G**4.0)",
+    "bands": [
+      "R",
+      "G"
+    ]
+  },
+  {
+    "id": "rndvi",
+    "abbrev": "RNDVI",
+    "name": "Reversed Normalized Difference Vegetation Index",
+    "category": "water",
+    "formula": "(R - N)/(R + N)",
+    "bands": [
+      "R",
+      "N"
+    ]
+  },
+  {
+    "id": "s2rep",
+    "abbrev": "S2REP",
+    "name": "Sentinel-2 Red-Edge Position",
+    "category": "vegetation",
+    "formula": "705.0 + 35.0 * ((((RE3 + R) / 2.0) - RE1) / (RE2 - RE1))",
+    "bands": [
+      "RE3",
+      "R",
+      "RE1",
+      "RE2"
+    ]
+  },
+  {
+    "id": "s2wi",
+    "abbrev": "S2WI",
+    "name": "Sentinel-2 Water Index",
+    "category": "water",
+    "formula": "(RE1 - S2)/(RE1 + S2)",
+    "bands": [
+      "RE1",
+      "S2"
+    ]
+  },
+  {
+    "id": "s3",
+    "abbrev": "S3",
+    "name": "S3 Snow Index",
+    "category": "environmental",
+    "formula": "(N * (R - S1)) / ((N + R) * (N + S1))",
+    "bands": [
+      "N",
+      "R",
+      "S1"
+    ]
+  },
+  {
+    "id": "sarvi",
+    "abbrev": "SARVI",
+    "name": "Soil Adjusted and Atmospherically Resistant Vegetation Index",
+    "category": "vegetation",
+    "formula": "(1 + L)*(N - (R - (R - B))) / (N + (R - (R - B)) + L)",
+    "bands": [
+      "N",
+      "R",
+      "B"
+    ]
+  },
+  {
+    "id": "saturation",
+    "abbrev": "S",
+    "name": "Saturation",
+    "category": "vegetation",
+    "formula": "(max(R,G,B) - min(R,G,B)) / max(R,G,B)",
+    "bands": []
+  },
+  {
+    "id": "savi",
+    "abbrev": "SAVI",
+    "name": "Soil Adjusted Vegetation Index",
+    "category": "vegetation",
+    "formula": "((NIR - Red) / (NIR + Red + L)) * (1 + L)",
+    "bands": [
+      "Red",
+      "NIR"
+    ]
+  },
+  {
+    "id": "savi2",
+    "abbrev": "SAVI2",
+    "name": "Soil-Adjusted Vegetation Index 2",
+    "category": "vegetation",
+    "formula": "N / (R + (slb / sla))",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "savit",
+    "abbrev": "SAVIT",
+    "name": "Soil-Adjusted Vegetation Index Thermal",
+    "category": "fire",
+    "formula": "(1.0 + L) * (N - (R * T / 10000.0)) / (N + (R * T / 10000.0) + L)",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "sbi",
+    "abbrev": "SBI",
+    "name": "Tasselled Cap - brightness",
+    "category": "vegetation",
+    "formula": "0.3037 * blue + 0.2793 * green + 0.4743 * red + 0.5585 * nir + 0.5082 * swir1 + 0.1863 * swir2",
+    "bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2"
+    ]
+  },
+  {
+    "id": "seli",
+    "abbrev": "SeLI",
+    "name": "Sentinel-2 LAI Green Index",
+    "category": "vegetation",
+    "formula": "(N2 - RE1) / (N2 + RE1)",
+    "bands": [
+      "RE1"
+    ]
+  },
+  {
+    "id": "sevi",
+    "abbrev": "SEVI",
+    "name": "Shadow-Eliminated Vegetation Index",
+    "category": "vegetation",
+    "formula": "(N/R) + fdelta * (1.0/R)",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "si",
+    "abbrev": "SI",
+    "name": "Shadow Index",
+    "category": "vegetation",
+    "formula": "((1.0 - B) * (1.0 - G) * (1.0 - R)) ** (1/3)",
+    "bands": [
+      "B",
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "sipi",
+    "abbrev": "SIPI",
+    "name": "Structure Insensitive Pigment Index",
+    "category": "vegetation",
+    "formula": "(N - A) / (N - R)",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "sipi2",
+    "abbrev": "SIPI",
+    "name": "Structure Insensitive Pigment Index",
+    "category": "vegetation",
+    "formula": "(800 - 445) / (800 - 680)",
+    "bands": [
+      "445",
+      "680",
+      "800"
+    ]
+  },
+  {
+    "id": "slavi",
+    "abbrev": "SLAVI",
+    "name": "Specific Leaf Area Vegetation Index",
+    "category": "vegetation",
+    "formula": "N/(R + S2)",
+    "bands": [
+      "N",
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "snirvlswi",
+    "abbrev": "sNIRvLSWI",
+    "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for LSWI",
+    "category": "vegetation",
+    "formula": "((N - S2)/(N + S2)) * N",
+    "bands": [
+      "N",
+      "S2"
+    ]
+  },
+  {
+    "id": "snirvndpi",
+    "abbrev": "sNIRvNDPI",
+    "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for NDPI",
+    "category": "vegetation",
+    "formula": "(N - (alpha * R + (1.0 - alpha) * S2))/(N + (alpha * R + (1.0 - alpha) * S2)) * N",
+    "bands": [
+      "N",
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "snirvndvilswip",
+    "abbrev": "sNIRvNDVILSWIP",
+    "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Product",
+    "category": "vegetation",
+    "formula": "((N - R)/(N + R)) * ((N - S2)/(N + S2)) * N",
+    "bands": [
+      "N",
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "snirvndvilswis",
+    "abbrev": "sNIRvNDVILSWIS",
+    "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation for the NDVI-LSWI Sum",
+    "category": "vegetation",
+    "formula": "(((N - R)/(N + R)) + ((N - S2)/(N + S2))) * N",
+    "bands": [
+      "N",
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "snirvswir",
+    "abbrev": "sNIRvSWIR",
+    "name": "SWIR-enhanced Near-Infrared Reflectance of Vegetation",
+    "category": "vegetation",
+    "formula": "((N - R - S2 ** 2.0)/(N + R + S2 ** 2.0)) * N",
+    "bands": [
+      "N",
+      "R",
+      "S2"
+    ]
+  },
+  {
+    "id": "sr",
+    "abbrev": "SR",
+    "name": "Simple Ratio",
+    "category": "vegetation",
+    "formula": "N/R",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "sr2",
+    "abbrev": "SR2",
+    "name": "Simple Ratio (800 and 550 nm)",
+    "category": "vegetation",
+    "formula": "N/G",
+    "bands": [
+      "N",
+      "G"
+    ]
+  },
+  {
+    "id": "sr3",
+    "abbrev": "SR3",
+    "name": "Simple Ratio (860, 550 and 708 nm)",
+    "category": "vegetation",
+    "formula": "N2/(G * RE1)",
+    "bands": [
+      "G",
+      "RE1"
+    ]
+  },
+  {
+    "id": "sr555",
+    "abbrev": "SR555",
+    "name": "Simple Ratio (555 and 750 nm)",
+    "category": "vegetation",
+    "formula": "RE2 / G",
+    "bands": [
+      "RE2",
+      "G"
+    ]
+  },
+  {
+    "id": "sr705",
+    "abbrev": "SR705",
+    "name": "Simple Ratio (705 and 750 nm)",
+    "category": "vegetation",
+    "formula": "RE2 / RE1",
+    "bands": [
+      "RE2",
+      "RE1"
+    ]
+  },
+  {
+    "id": "swi",
+    "abbrev": "SWI",
+    "name": "Snow Water Index",
+    "category": "environmental",
+    "formula": "(G * (N - S1)) / ((G + N) * (N + S1))",
+    "bands": [
+      "G",
+      "N",
+      "S1"
+    ]
+  },
+  {
+    "id": "swm",
+    "abbrev": "SWM",
+    "name": "Sentinel Water Mask",
+    "category": "water",
+    "formula": "(B + G)/(N + S1)",
+    "bands": [
+      "B",
+      "G",
+      "N",
+      "S1"
+    ]
+  },
+  {
+    "id": "tcari",
+    "abbrev": "TCARI",
+    "name": "Transformed Chlorophyll Absorption Ratio",
+    "category": "vegetation",
+    "formula": "3 * ((re1 - red) - 0.2 * (re1 - green) * (re1/red))",
+    "bands": [
+      "green",
+      "red",
+      "re1"
+    ]
+  },
+  {
+    "id": "tcari_osavi",
+    "abbrev": "TCARI/OSAVI",
+    "name": "TCARI/OSAVI",
+    "category": "vegetation",
+    "formula": "3 * (700 - 670) - 0.2 * (700 - 550) * (700 / 670) / ((1 + 0.16) * (800 - 670) / (800 + 670 + 0.16))",
+    "bands": [
+      "550",
+      "670",
+      "700",
+      "800"
+    ]
+  },
+  {
+    "id": "tcari_osavi705",
+    "abbrev": "TCARI/OSAVI705",
+    "name": "TCARI/OSAVI 705,750",
+    "category": "vegetation",
+    "formula": "3 * (750 - 705) - 0.2 * (750 - 550) * (750 / 705) / ((1 + 0.16) * (750 - 705) / (750 + 705 + 0.16))",
+    "bands": [
+      "550",
+      "705",
+      "750"
+    ]
+  },
+  {
+    "id": "tcariosavi",
+    "abbrev": "TCARIOSAVI",
+    "name": "TCARI/OSAVI Ratio",
+    "category": "vegetation",
+    "formula": "(3 * ((RE1 - R) - 0.2 * (RE1 - G) * (RE1 / R))) / (1.16 * (N - R) / (N + R + 0.16))",
+    "bands": [
+      "RE1",
+      "R",
+      "G",
+      "N"
+    ]
+  },
+  {
+    "id": "tcariosavi705",
+    "abbrev": "TCARIOSAVI705",
+    "name": "TCARI/OSAVI Ratio (705 and 750 nm)",
+    "category": "vegetation",
+    "formula": "(3 * ((RE2 - RE1) - 0.2 * (RE2 - G) * (RE2 / RE1))) / (1.16 * (RE2 - RE1) / (RE2 + RE1 + 0.16))",
+    "bands": [
+      "RE2",
+      "RE1",
+      "G"
+    ]
+  },
+  {
+    "id": "tci",
+    "abbrev": "TCI",
+    "name": "Triangular Chlorophyll Index",
+    "category": "vegetation",
+    "formula": "1.2 * (RE1 - G) - 1.5 * (R - G) * (RE1 / R) ** 0.5",
+    "bands": [
+      "RE1",
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "tdvi",
+    "abbrev": "TDVI",
+    "name": "Transformed Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "1.5 * ((N - R)/((N ** 2.0 + R + 0.5) ** 0.5))",
+    "bands": [
+      "N",
+      "R"
+    ]
+  },
+  {
+    "id": "tgi",
+    "abbrev": "TGI",
+    "name": "Triangular Greenness Index",
+    "category": "vegetation",
+    "formula": "- 0.5 * (190 * (R - G) - 120 * (R - B))",
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ]
+  },
+  {
+    "id": "trivi",
+    "abbrev": "TriVI",
+    "name": "Triangular Vegetation Index",
+    "category": "vegetation",
+    "formula": "0.5 * (120 * (N - G) - 200 * (R - G))",
+    "bands": [
+      "N",
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "trrvi",
+    "abbrev": "TRRVI",
+    "name": "Transformed Red Range Vegetation Index",
+    "category": "vegetation",
+    "formula": "((RE2 - R) / (RE2 + R)) / (((N - R) / (N + R)) + 1.0)",
+    "bands": [
+      "RE2",
+      "R",
+      "N"
+    ]
+  },
+  {
+    "id": "tsavi",
+    "abbrev": "TSAVI",
+    "name": "Transformed Soil Adjusted Vegetation Index",
+    "category": "vegetation",
+    "formula": "(a * (nir - a * red - b)) / (red + a * nir - a * b + X * (1 + a^2))",
+    "bands": [
+      "red",
+      "nir"
+    ]
+  },
+  {
+    "id": "ttvi",
+    "abbrev": "TTVI",
+    "name": "Transformed Triangular Vegetation Index",
+    "category": "vegetation",
+    "formula": "0.5 * ((865.0 - 740.0) * (RE3 - RE2) - (N2 - RE2) * (783.0 - 740))",
+    "bands": [
+      "RE3",
+      "RE2",
+      "N2"
+    ]
+  },
+  {
+    "id": "tvi",
+    "abbrev": "TVI",
+    "name": "Transformed Vegetation Index",
+    "category": "vegetation",
+    "formula": "sqrt((nir - red) / (nir + red) + 0.5)",
+    "bands": [
+      "red",
+      "nir"
+    ]
+  },
+  {
+    "id": "tvi_broge",
+    "abbrev": "TVI",
+    "name": "Triangular Vegetation Index",
+    "category": "vegetation",
+    "formula": "0.5 * (120 * (750 - 550) - 200 * (670 - 550))",
+    "bands": [
+      "550",
+      "670",
+      "750"
+    ]
+  },
+  {
+    "id": "tvi_triangular",
+    "abbrev": "TVI",
+    "name": "Triangular Vegetation Index",
+    "category": "vegetation",
+    "formula": "0.5 * (120 * (re1 - green) - 200 * (red - green))",
+    "bands": [
+      "green",
+      "red",
+      "re1"
+    ]
+  },
+  {
+    "id": "ui",
+    "abbrev": "UI",
+    "name": "Urban Index",
+    "category": "urban",
+    "formula": "(S2 - N)/(S2 + N)",
+    "bands": [
+      "S2",
+      "N"
+    ]
+  },
+  {
+    "id": "vari",
+    "abbrev": "VARI",
+    "name": "Visible Atmospherically Resistant Index",
+    "category": "vegetation",
+    "formula": "(G - R) / (G + R - B)",
+    "bands": [
+      "G",
+      "R",
+      "B"
+    ]
+  },
+  {
+    "id": "vari700",
+    "abbrev": "VARI700",
+    "name": "Visible Atmospherically Resistant Index (700 nm)",
+    "category": "vegetation",
+    "formula": "(RE1 - 1.7 * R + 0.7 * B) / (RE1 + 1.3 * R - 1.3 * B)",
+    "bands": [
+      "RE1",
+      "R",
+      "B"
+    ]
+  },
+  {
+    "id": "vari_rededge",
+    "abbrev": "VARIrededge",
+    "name": "Visible Atmospherically Resistant Index Red Edge",
+    "category": "vegetation",
+    "formula": "(re1 - red) / (re1 + red)",
+    "bands": [
+      "red",
+      "re1"
+    ]
+  },
+  {
+    "id": "vari_visible",
+    "abbrev": "VARI",
+    "name": "Visible Atmospherically Resistant Index",
+    "category": "vegetation",
+    "formula": "(GREEN - RED) / (GREEN + RED - BLUE)",
+    "bands": [
+      "BLUE",
+      "GREEN",
+      "RED"
+    ]
+  },
+  {
+    "id": "vgnirbi",
+    "abbrev": "VgNIRBI",
+    "name": "Visible Green-Based Built-Up Index",
+    "category": "urban",
+    "formula": "(G - N)/(G + N)",
+    "bands": [
+      "G",
+      "N"
+    ]
+  },
+  {
+    "id": "vi6t",
+    "abbrev": "VI6T",
+    "name": "VI6T Index",
+    "category": "burn",
+    "formula": "(N - T/10000.0)/(N + T/10000.0)",
+    "bands": [
+      "N"
+    ]
+  },
+  {
+    "id": "vi700",
+    "abbrev": "VI700",
+    "name": "Vegetation Index (700 nm)",
+    "category": "vegetation",
+    "formula": "(RE1 - R) / (RE1 + R)",
+    "bands": [
+      "RE1",
+      "R"
+    ]
+  },
+  {
+    "id": "vibi",
+    "abbrev": "VIBI",
+    "name": "Vegetation Index Built-up Index",
+    "category": "urban",
+    "formula": "((N-R)/(N+R))/(((N-R)/(N+R)) + ((S1-N)/(S1+N)))",
+    "bands": [
+      "N",
+      "R",
+      "S1"
+    ]
+  },
+  {
+    "id": "vig",
+    "abbrev": "VIG",
+    "name": "Vegetation Index Green",
+    "category": "vegetation",
+    "formula": "(G - R) / (G + R)",
+    "bands": [
+      "G",
+      "R"
+    ]
+  },
+  {
+    "id": "vog1",
+    "abbrev": "VOG1",
+    "name": "Vogelmann Red Edge Index 1",
+    "category": "vegetation",
+    "formula": "re2 / re1",
+    "bands": [
+      "re1",
+      "re2"
+    ]
+  },
+  {
+    "id": "vog2",
+    "abbrev": "VOG2",
+    "name": "Vogelmann Red Edge Index 2",
+    "category": "vegetation",
+    "formula": "(re2_734 - re2_747) / (re1_715 + re1_726)",
+    "bands": [
+      "re1_715",
+      "re1_726",
+      "re2_734",
+      "re2_747"
+    ]
+  },
+  {
+    "id": "vog3",
+    "abbrev": "VOG3",
+    "name": "Vogelmann Red Edge Index 3",
+    "category": "vegetation",
+    "formula": "re1_715 / re1_705",
+    "bands": [
+      "re1_705",
+      "re1_715"
+    ]
+  },
+  {
+    "id": "vrnirbi",
+    "abbrev": "VrNIRBI",
+    "name": "Visible Red-Based Built-Up Index",
+    "category": "urban",
+    "formula": "(R - N)/(R + N)",
+    "bands": [
+      "R",
+      "N"
+    ]
+  },
+  {
+    "id": "wdrvi",
+    "abbrev": "WDRVI",
+    "name": "Wide Dynamic Range Vegetation Index",
+    "category": "vegetation",
+    "formula": "(0.1 * nir - red) / (0.1 * nir + red)",
+    "bands": [
+      "red",
+      "nir"
+    ]
+  },
+  {
+    "id": "wdvi",
+    "abbrev": "WDVI",
+    "name": "Weighted Difference Vegetation Index",
+    "category": "vegetation",
+    "formula": "NIR - (s * Red)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "wet_tc",
+    "abbrev": "WET",
+    "name": "Tasselled Cap - wetness",
+    "category": "water",
+    "formula": "0.1509 * blue + 0.1973 * green + 0.3279 * red + 0.3406 * nir - 0.7112 * swir1 - 0.4572 * swir2",
+    "bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2"
+    ]
+  },
+  {
+    "id": "wi1",
+    "abbrev": "WI1",
+    "name": "Water Index 1",
+    "category": "water",
+    "formula": "(G - S2) / (G + S2)",
+    "bands": [
+      "G",
+      "S2"
+    ]
+  },
+  {
+    "id": "wi2",
+    "abbrev": "WI2",
+    "name": "Water Index 2",
+    "category": "water",
+    "formula": "(B - S2) / (B + S2)",
+    "bands": [
+      "B",
+      "S2"
+    ]
+  },
+  {
+    "id": "wi2015",
+    "abbrev": "WI2015",
+    "name": "Water Index 2015",
+    "category": "water",
+    "formula": "1.7204 + 171 * G + 3 * R - 70 * N - 45 * S1 - 71 * S2",
+    "bands": [
+      "G",
+      "R",
+      "N",
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "wri",
+    "abbrev": "WRI",
+    "name": "Water Ratio Index",
+    "category": "water",
+    "formula": "(G + R)/(N + S1)",
+    "bands": [
+      "G",
+      "R",
+      "N",
+      "S1"
+    ]
+  },
+  {
+    "id": "navi",
+    "abbrev": "NAVI",
+    "name": "Normalized Archaeological Vegetation Index",
+    "category": "archaeology",
+    "formula": "(NIR - RedEdge) / (RedEdge + NIR)",
+    "bands": [
+      "NIR",
+      "RedEdge"
+    ]
+  },
+  {
+    "id": "nai",
+    "abbrev": "NAI",
+    "name": "Normalized Archaeological Index",
+    "category": "archaeology",
+    "formula": "(NIR - RedEdge) / (RedEdge + NIR)",
+    "bands": [
+      "NIR",
+      "RedEdge"
+    ]
+  },
+  {
+    "id": "ndvi_arch",
+    "abbrev": "NDVI (Arch)",
+    "name": "Normalized Difference Vegetation Index (Archaeology)",
+    "category": "archaeology",
+    "formula": "(NIR - Red) / (NIR + Red)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "gndvi_arch",
+    "abbrev": "GNDVI (Arch)",
+    "name": "Green Normalized Difference Vegetation Index (Archaeology)",
+    "category": "archaeology",
+    "formula": "(NIR - Green) / (NIR + Green)",
+    "bands": [
+      "NIR",
+      "Green"
+    ]
+  },
+  {
+    "id": "savi_arch",
+    "abbrev": "SAVI (Arch)",
+    "name": "Soil Adjusted Vegetation Index (Archaeology)",
+    "category": "archaeology",
+    "formula": "(1.5 * (NIR - Red)) / (NIR + Red + 0.5)",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  },
+  {
+    "id": "sr_arch",
+    "abbrev": "SR (Arch)",
+    "name": "Simple Ratio (Archaeology)",
+    "category": "archaeology",
+    "formula": "NIR / Red",
+    "bands": [
+      "NIR",
+      "Red"
+    ]
+  }
+]
