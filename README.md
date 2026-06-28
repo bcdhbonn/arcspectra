@@ -120,28 +120,28 @@ In the **📝 Index Editor** tab, you can search and filter the database:
 
 ---
 
-## 📊 Spektralindizes in der Archäologie (Archäologischer Leitfaden)
+## 📊 Spectral Indices in Archaeology (Archaeological Guide)
 
-ArcSpectra lädt eine Datenbank mit **182 optischen Indizes** und bietet eine vorkonfigurierte Kategorie **`archaeology`** mit den für die archäologische Prospektion wichtigsten Indizes:
+ArcSpectra loads a database of **182 optical indices** and offers a pre-configured **`archaeology`** category with the most relevant indices for archaeological prospection:
 
 *   **NDVI (Normalized Difference Vegetation Index)**
-    *   *Formel:* `(NIR - Red) / (NIR + Red)`
-    *   *Archäologischer Nutzen:* Der Standard-Index für Biomasse und Pflanzenvitalität. Extrem effektiv beim Aufspüren von Bewuchsmerkmalen über verfüllten Befunden (z. B. Gräben) oder massiven Strukturen (z. B. römische Fundamente).
+    *   *Formula:* `(NIR - Red) / (NIR + Red)`
+    *   *Archaeological Value:* The standard index for biomass and vegetation health. Extremely effective at mapping cropmarks over filled-in features (e.g., ditches, pits) or massive structures (e.g., Roman masonry, foundations).
 *   **GNDVI (Green NDVI)**
-    *   *Formel:* `(NIR - Green) / (NIR + Green)`
-    *   *Archäologischer Nutzen:* Verwendet den grünen Kanal anstelle des roten. Reagiert empfindlicher auf Schwankungen des Chlorophyllgehalts und eignet sich hervorragend zur Erkennung früher Phasen von Vegetationsstress über verborgenen Mauern.
+    *   *Formula:* `(NIR - Green) / (NIR + Green)`
+    *   *Archaeological Value:* Uses the green channel instead of red. More sensitive to variations in canopy chlorophyll content, making it excellent for detecting early stages of vegetation stress over buried structures.
 *   **SAVI (Soil Adjusted Vegetation Index)**
-    *   *Formel:* `(1.5 * (NIR - Red)) / (NIR + Red + 0.5)`
-    *   *Archäologischer Nutzen:* Minimiert den störenden Einfluss von offenem Boden. Unerlässlich für die Prospektion auf Äckern mit lückenhaftem Bewuchs oder in trockenen Regionen.
+    *   *Formula:* `(1.5 * (NIR - Red)) / (NIR + Red + 0.5)`
+    *   *Archaeological Value:* Minimizes the disturbing influence of bare soil background. Essential for prospection in agricultural fields with sparse crop cover or dry soils.
 *   **WDVI (Weighted Difference Vegetation Index)**
-    *   *Formel:* `NIR - (s * Red)`
-    *   *Archäologischer Nutzen:* Bereinigt die Vegetationswerte mithilfe der Steigung der Bodenlinie (`s`). Perfekt geeignet, um Störeffekte von reinem Boden vollständig zu eliminieren.
+    *   *Formula:* `NIR - (s * Red)`
+    *   *Archaeological Value:* Corrects vegetation values using the slope of the soil line (`s`). Perfectly suited for completely eliminating background soil reflectance noise.
 *   **NAVI (Normalized Archaeological Vegetation Index)** & **NAI (Normalized Archaeological Index)**
-    *   *Formel:* `(NIR - RedEdge) / (RedEdge + NIR)`
-    *   *Archäologischer Nutzen:* Nutzt die Wellenlängen im Bereich der "Red-Edge"-Kante (~700–800 nm). Maximiert den spektralen Kontrast zwischen gesundem Bewuchs und durch archäologische Strukturen gestresster Vegetation.
+    *   *Formula:* `(NIR - RedEdge) / (RedEdge + NIR)`
+    *   *Archaeological Value:* Leverages wavelengths along the "Red-Edge" transition zone (~700–800 nm). Maximizes the spectral contrast between healthy surrounding crops and vegetation stressed by subsurface archaeological features.
 *   **NDWI (Normalized Difference Water Index)**
-    *   *Formel:* `(Green - NIR) / (Green + NIR)`
-    *   *Archäologischer Nutzen:* Reagiert sensitiv auf den Wassergehalt in Blättern und Böden. Ideal zum Aufspüren feuchter Grabenwerke oder feuchter Senken.
+    *   *Formula:* `(Green - NIR) / (Green + NIR)`
+    *   *Archaeological Value:* Responds to leaf canopy and soil water content. Ideal for detecting buried moisture-retaining ditch systems, moats, and hollows.
 
 ---
 
