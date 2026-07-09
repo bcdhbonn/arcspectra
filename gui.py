@@ -364,10 +364,20 @@ class MultispectralApp(ctk.CTk):
         # Defaults
         self.sensor_templates = {
             "NRW (State Geodata)": {"Red": 1, "Green": 2, "Blue": 3, "NIR": 4},
-            "DJI Multispectral": {"Red": 3, "Green": 2, "Blue": 1, "NIR": 5},
-            "SEQ (MicaSense RedEdge)": {"Red": 2, "Green": 1, "NIR": 4, "RedEdge": 3},
+            "DJI Multispectral (P4M)": {"Red": 3, "Green": 2, "Blue": 1, "NIR": 5, "RedEdge": 4},
+            "DJI Mavic 3M": {"Red": 2, "Green": 1, "NIR": 4, "RedEdge": 3},
+            "MicaSense RedEdge / Altum (Wavelength-Sorted)": {"Blue": 1, "Green": 2, "Red": 3, "RedEdge": 4, "NIR": 5},
+            "MicaSense RedEdge / Altum (Raw / Native)": {"Blue": 1, "Green": 2, "Red": 3, "NIR": 4, "RedEdge": 5},
+            "Parrot Sequoia (SEQ)": {"Red": 2, "Green": 1, "NIR": 4, "RedEdge": 3},
             "Sentinel-2 (B4,B3,B2,B8,B5)": {"Red": 4, "Green": 3, "Blue": 2, "NIR": 8, "RedEdge": 5},
-            "Landsat 8/9 (B4,B3,B2,B5)": {"Red": 4, "Green": 3, "Blue": 2, "NIR": 5}
+            "Landsat 8/9 (B4,B3,B2,B5)": {"Red": 4, "Green": 3, "Blue": 2, "NIR": 5},
+            "PlanetScope (4-Band)": {"Blue": 1, "Green": 2, "Red": 3, "NIR": 4},
+            "PlanetScope SuperDove (8-Band)": {"Blue": 2, "Green": 4, "Red": 6, "RedEdge": 7, "NIR": 8},
+            "WorldView-2/3 VNIR (8-Band)": {"Blue": 2, "Green": 3, "Red": 5, "RedEdge": 6, "NIR": 7},
+            "RapidEye (5-Band)": {"Blue": 1, "Green": 2, "Red": 3, "RedEdge": 4, "NIR": 5},
+            "MODIS (B1-B4)": {"Red": 1, "Green": 4, "Blue": 3, "NIR": 2},
+            "MAPIR Survey3 RGN (Processed)": {"Red": 1, "Green": 2, "NIR": 3},
+            "MAPIR Survey3 NGB (Processed)": {"NIR": 1, "Green": 2, "Blue": 3}
         }
         self.save_sensor_templates()
 
