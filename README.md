@@ -62,7 +62,18 @@ To run research scripts and batch processing:
 
 ---
 
-## 🤝 Projektkontext & Förderung (Funding)
+## 🤝 Project Context & Funding
 
-Dieses Werkzeug entstand im Rahmen von **NFDI4Objects** (Nationale Forschungsdateninfrastruktur für Objekte des materiellen Kulturguts) im **[Trail 1: Archäologische Fernerkundung im römischen Rheinland / Archaeological Remote Sensing in the Roman Rhineland](https://www.nfdi4objects.net/trails/archaeological_remote_sensing_in_the_roman_rhineland/)**.
+This tool was developed as part of the consortium **NFDI4Objects** (National Research Data Infrastructure for Objects of Material Cultural Heritage) within **[Trail 1: Archaeological Remote Sensing in the Roman Rhineland](https://www.nfdi4objects.net/trails/archaeological_remote_sensing_in_the_roman_rhineland/)**.
 
+NFDI4Objects is funded by the **German Research Foundation (DFG)** - Project number 441958489.
+
+<p align="center">
+  <a href="https://www.nfdi4objects.net/">
+    <img src="docs/images/nfdi4objects_logo.png" height="70" alt="NFDI4Objects Logo">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.dfg.de/">
+    <img src="docs/images/dfg_logo.jpg" height="70" alt="DFG Logo">
+  </a>
+</p>
