@@ -438,12 +438,36 @@ class MultispectralApp(ctk.CTk):
         self.sidebar_frame.grid_rowconfigure(9, weight=1)  # Spacer
 
         # Sidebar Title
-        self.logo_label = ctk.CTkLabel(
-            self.sidebar_frame, 
-            text="⚙️ Configuration", 
-            font=ctk.CTkFont(size=20, weight="bold")
-        )
-        self.logo_label.grid(row=0, column=0, padx=20, pady=(10, 8), sticky="w")
+        logo_path = "logo.png"
+        logo_loaded = False
+        if os.path.exists(logo_path):
+            try:
+                from PIL import Image
+                self.logo_img = ctk.CTkImage(
+                    light_image=Image.open(logo_path),
+                    dark_image=Image.open(logo_path),
+                    size=(36, 36)
+                )
+                self.logo_image_label = ctk.CTkLabel(self.sidebar_frame, image=self.logo_img, text="")
+                self.logo_image_label.grid(row=0, column=0, padx=(15, 0), pady=(15, 10), sticky="w")
+                
+                self.logo_label = ctk.CTkLabel(
+                    self.sidebar_frame, 
+                    text="ArcSpectra", 
+                    font=ctk.CTkFont(size=22, weight="bold")
+                )
+                self.logo_label.grid(row=0, column=0, padx=(60, 15), pady=(15, 10), sticky="w")
+                logo_loaded = True
+            except Exception as e:
+                print("Could not load logo image:", e)
+        
+        if not logo_loaded:
+            self.logo_label = ctk.CTkLabel(
+                self.sidebar_frame, 
+                text="⚙️ Configuration", 
+                font=ctk.CTkFont(size=20, weight="bold")
+            )
+            self.logo_label.grid(row=0, column=0, padx=20, pady=(15, 10), sticky="w")
 
         # 1. File Selection Frame
         self.io_frame = ctk.CTkFrame(self.sidebar_frame, fg_color="transparent")

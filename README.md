@@ -1,5 +1,10 @@
 # 🌿🏛️ ArcSpectra - Multispectral Vegetation Index Processor
 
+<p align="center">
+  <img src="logo.png" width="150" alt="ArcSpectra Logo">
+</p>
+
+
 **ArcSpectra** is a high-performance Python application designed for remote sensing archaeology and non-destructive prospection. It calculates and visualizes optical spectral indices from multispectral drone (UAV) or satellite imagery to reveal buried archaeological features (cropmarks and soilmarks).
 
 For a detailed explanation of archaeological prospection, DJI & MicaSense sensor mapping examples, and UI controls, please refer to the **[ArcSpectra GitHub Wiki](https://github.com/bcdhbonn/arcspectra/wiki)**.
@@ -54,3 +59,10 @@ To run research scripts and batch processing:
 - [project_indices.json](file:///c:/Users/langm/sciebo/BCDH_Projektbox/1_BCDH%20Intern/Scripts/multispectral/multispectral/project_indices.json): Persisted active indices list.
 - `input/`: Folder where input multispectral GeoTIFF files should be placed.
 - `output/`: Folder where computed rasters and PNG plots are exported.
+
+---
+
+## 🤝 Projektkontext & Förderung (Funding)
+
+Dieses Werkzeug entstand im Rahmen von **NFDI4Objects** (Nationale Forschungsdateninfrastruktur für Objekte des materiellen Kulturguts) im **[Trail 1: Archäologische Fernerkundung im römischen Rheinland / Archaeological Remote Sensing in the Roman Rhineland](https://www.nfdi4objects.net/trails/archaeological_remote_sensing_in_the_roman_rhineland/)**.
+
