@@ -70,10 +70,10 @@ NFDI4Objects is funded by the **German Research Foundation (DFG)** - Project num
 
 <p align="center">
   <a href="https://www.nfdi4objects.net/">
-    <img src="docs/images/nfdi4objects_logo.png" height="70" alt="NFDI4Objects Logo">
+    <img src="https://www.nfdi4objects.net/assets/icons/logo/nfd14o-Verlauf.svg" height="70" alt="NFDI4Objects Logo">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.dfg.de/">
-    <img src="docs/images/dfg_logo.jpg" height="70" alt="DFG Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_DFG.svg" height="70" alt="DFG Logo">
   </a>
 </p>
